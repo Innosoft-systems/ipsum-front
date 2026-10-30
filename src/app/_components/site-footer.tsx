@@ -2,18 +2,11 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { contactInfo } from '../_data/content';
+import { flatNavigation } from '../_data/navigation';
 import { AppointmentDialog } from './appointment-dialog';
 
 export function SiteFooter() {
   const t = useTranslations('common');
-
-  const navigationItems = [
-    { label: t('navigation.home'), href: '/' },
-    { label: t('navigation.about'), href: '/about' },
-    { label: t('navigation.education'), href: '/education' },
-    { label: t('navigation.services'), href: '/services' },
-    { label: t('navigation.contact'), href: '/contact' },
-  ];
 
   return (
     <footer className="site-footer" id="contacts">
@@ -95,9 +88,9 @@ export function SiteFooter() {
         <div>
           <h3>{t('footer.navTitle')}</h3>
           <nav aria-label={t('footer.navTitle')}>
-            {navigationItems.map((item) => (
+            {flatNavigation.map((item) => (
               <Link href={item.href} key={item.href}>
-                {item.label}
+                {t(`navigation.${item.key}`)}
               </Link>
             ))}
           </nav>

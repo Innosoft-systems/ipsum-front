@@ -6,7 +6,17 @@
       "about": "About Us",
       "education": "Education",
       "services": "Services",
-      "contact": "Contacts"
+      "contact": "Contacts",
+      "directions": "Specialties",
+      "reviews": "Reviews",
+      "checkup": "Check-up programs",
+      "oncology": "Oncology",
+      "digitalPathology": "Digital pathology",
+      "patientReviews": "Patient reviews",
+      "internationalReviews": "International reviews",
+      "news": "News",
+      "hematology": "Hematology",
+      "endocrinology": "Endocrinology"
     },
     "header": {
       "callback": "Leave a request",
@@ -425,5 +435,315 @@
     "errorToast": "Failed to submit request. Please check your data and try again.",
     "closeAria": "Close modal",
     "defaultTriggerLabel": "Leave a request"
+  },
+  "checkup": {
+    "eyebrow": "Check-up programs",
+    "title": "Comprehensive health check-up programs",
+    "text": "Ready-made test panels for assessing your health and detecting deviations early. We will help you choose a program for your age and goals.",
+    "intro": {
+      "eyebrow": "Prevention",
+      "title": "Learn more about your health",
+      "text": "A regular check-up helps detect changes at an early stage, when treatment is most effective. This is placeholder text: the final program descriptions will be agreed with the center's physicians."
+    },
+    "includedTitle": "What is included",
+    "programBtn": "Book this program",
+    "programs": [
+      {
+        "name": "Basic",
+        "desc": "A first assessment of general health for adults.",
+        "tests": [
+          "Complete blood count",
+          "Blood chemistry panel",
+          "Glucose and lipid profile",
+          "Urinalysis"
+        ]
+      },
+      {
+        "name": "Extended",
+        "desc": "An in-depth examination of the main body systems.",
+        "tests": [
+          "Everything in the Basic program",
+          "Thyroid hormones",
+          "Vitamin D and ferritin",
+          "Tumor markers (basic panel)",
+          "Coagulation panel"
+        ]
+      },
+      {
+        "name": "Women's health",
+        "desc": "Prevention and monitoring of the reproductive system.",
+        "tests": [
+          "Everything in the Basic program",
+          "Female sex hormones",
+          "Cytology (Pap test)",
+          "HPV testing"
+        ]
+      },
+      {
+        "name": "Men's health",
+        "desc": "Prevention and monitoring of men's health.",
+        "tests": [
+          "Everything in the Basic program",
+          "Testosterone and PSA",
+          "Thyroid hormones",
+          "Tumor markers (basic panel)"
+        ]
+      }
+    ],
+    "cta": {
+      "eyebrow": "Book an examination",
+      "title": "Not sure which program suits you?",
+      "btn": "Request a call"
+    }
+  },
+  "oncology": {
+    "eyebrow": "Oncology",
+    "title": "Oncology diagnostics",
+    "text": "Accurate morphological and molecular diagnostics are the foundation of choosing the right treatment.",
+    "intro": {
+      "eyebrow": "About the field",
+      "title": "A diagnosis you can rely on",
+      "text": "We examine biopsy and surgical specimens using modern methods, with every report double-checked by experienced pathologists. This is placeholder text; the final description will be added later.",
+      "highlights": [
+        "Double-checked reports",
+        "Modern equipment",
+        "Expert consultations",
+        "Clear turnaround times"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostic directions",
+      "title": "What we examine",
+      "items": [
+        {
+          "title": "Histological examination",
+          "text": "Study of tissue from biopsy and surgical specimens to establish a morphological diagnosis."
+        },
+        {
+          "title": "Cytological diagnostics",
+          "text": "Examination of cells from aspirates, smears and fluids for early detection of changes."
+        },
+        {
+          "title": "Immunohistochemistry (IHC)",
+          "text": "Clarifying the tumor type and determining markers to guide therapy."
+        },
+        {
+          "title": "Molecular genetic testing",
+          "text": "Searching for mutations and biomarkers that affect the choice of targeted therapy."
+        },
+        {
+          "title": "Slide review and second opinion",
+          "text": "An independent expert opinion on existing histology slides and blocks."
+        },
+        {
+          "title": "Tumor markers and screening",
+          "text": "Laboratory tests for monitoring and early detection of oncological diseases."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Consultation",
+      "title": "Need a consultation on oncology diagnostics?",
+      "btn": "Request a call"
+    }
+  },
+  "digitalPathology": {
+    "eyebrow": "Digital pathology",
+    "title": "Digital pathology",
+    "text": "Digitizing histology slides lets you get an expert opinion faster, without shipping glass slides.",
+    "intro": {
+      "eyebrow": "About the technology",
+      "title": "A microscope in digital format",
+      "text": "Slides are scanned at high resolution and turned into digital images that can be reviewed remotely, archived and compared. This is placeholder text; the final description will be added later."
+    },
+    "benefits": {
+      "eyebrow": "Benefits",
+      "title": "What digital pathology offers",
+      "items": [
+        {
+          "title": "Speed",
+          "text": "The image is available to the expert right after scanning, with no slide delivery."
+        },
+        {
+          "title": "Remote consultations",
+          "text": "Opinions from specialists at other clinics and in other countries."
+        },
+        {
+          "title": "Reliable archive",
+          "text": "Digital copies do not fade or get damaged in storage."
+        },
+        {
+          "title": "Precision",
+          "text": "Measurement and comparison tools help in complex cases."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "From slide to report",
+      "desc": "The whole process is transparent for both patient and physician.",
+      "steps": [
+        {
+          "title": "Specimen intake",
+          "text": "We register the biomaterial and prepare the histology slides."
+        },
+        {
+          "title": "Scanning",
+          "text": "Slides are digitized on a high-resolution scanner."
+        },
+        {
+          "title": "Expert review",
+          "text": "A pathologist studies the image, with consultants joining when needed."
+        },
+        {
+          "title": "Report",
+          "text": "You receive the final report and access to the digital archive."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Consultation",
+      "title": "Want to learn more about digital pathology?",
+      "btn": "Request a call"
+    }
+  },
+  "reviews": {
+    "eyebrow": "Patient reviews",
+    "title": "What our patients say",
+    "text": "Opinions from people who trusted us with their health.",
+    "patients": {
+      "eyebrow": "Reviews",
+      "title": "Patient feedback"
+    },
+    "videos": {
+      "eyebrow": "Video",
+      "title": "Video reviews",
+      "text": "Patient stories in their own words.",
+      "play": "Watch video"
+    },
+    "photoAlt": "Patient photo",
+    "cta": {
+      "eyebrow": "Your opinion matters",
+      "title": "Want to become our patient?",
+      "btn": "Request a call"
+    }
+  },
+  "internationalReviews": {
+    "eyebrow": "International reviews",
+    "title": "What international experts say",
+    "text": "Feedback from foreign specialists and partners on the work of the IPSUM Pathology laboratory.",
+    "photoAlt": "Expert photo"
+  },
+  "news": {
+    "eyebrow": "News",
+    "title": "News and events",
+    "text": "Laboratory news, conferences, symposiums and educational events.",
+    "readMore": "Read more",
+    "back": "All news",
+    "videoTitle": "Video",
+    "empty": "No news yet.",
+    "play": "Watch video"
+  },
+  "hematology": {
+    "eyebrow": "Hematology",
+    "title": "Hematology diagnostics",
+    "text": "Laboratory testing of blood and bone marrow for diagnosing and monitoring disorders of the blood-forming system.",
+    "intro": {
+      "eyebrow": "About the field",
+      "title": "Accurate diagnostics of blood disorders",
+      "text": "We perform a full range of hematology tests, from the complete blood count to immunophenotyping and molecular testing. This is placeholder text; the final description will be added later.",
+      "highlights": [
+        "Experienced specialists",
+        "Modern equipment",
+        "Expert consultations",
+        "Clear turnaround times"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostic directions",
+      "title": "What we examine",
+      "items": [
+        {
+          "title": "Complete blood count",
+          "text": "Assessment of blood cell composition including the differential count."
+        },
+        {
+          "title": "Blood cell morphology",
+          "text": "Microscopic examination of blood and bone marrow smears."
+        },
+        {
+          "title": "Flow cytometry",
+          "text": "Immunophenotyping of cells to diagnose hematological diseases."
+        },
+        {
+          "title": "Coagulation testing",
+          "text": "Assessment of the clotting system and thrombosis risk."
+        },
+        {
+          "title": "Molecular hematology",
+          "text": "Detection of mutations and translocations relevant to diagnosis and therapy choice."
+        },
+        {
+          "title": "Anemia workup",
+          "text": "Iron, ferritin, vitamin B12 and folate testing."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Consultation",
+      "title": "Need a consultation on hematology diagnostics?",
+      "btn": "Request a call"
+    }
+  },
+  "endocrinology": {
+    "eyebrow": "Endocrinology",
+    "title": "Endocrinology diagnostics",
+    "text": "Hormonal and biochemical testing to detect and monitor endocrine disorders.",
+    "intro": {
+      "eyebrow": "About the field",
+      "title": "Hormonal balance under control",
+      "text": "We test hormones and metabolic markers that help the physician assess how the endocrine glands are working. This is placeholder text; the final description will be added later.",
+      "highlights": [
+        "Wide hormone panel",
+        "Modern equipment",
+        "Expert consultations",
+        "Clear turnaround times"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostic directions",
+      "title": "What we examine",
+      "items": [
+        {
+          "title": "Thyroid",
+          "text": "TSH, free T3 and T4, antibodies to thyroid peroxidase and thyroglobulin."
+        },
+        {
+          "title": "Diabetes",
+          "text": "Glucose, glycated hemoglobin, insulin and C-peptide."
+        },
+        {
+          "title": "Sex hormones",
+          "text": "Estradiol, progesterone, testosterone, LH, FSH and prolactin."
+        },
+        {
+          "title": "Adrenal glands",
+          "text": "Cortisol, ACTH, aldosterone and renin."
+        },
+        {
+          "title": "Parathyroid glands and calcium metabolism",
+          "text": "Parathyroid hormone, calcium, phosphorus and vitamin D."
+        },
+        {
+          "title": "Cytology of nodules",
+          "text": "Examination of fine-needle aspirates from thyroid nodules."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Consultation",
+      "title": "Need a consultation on endocrinology diagnostics?",
+      "btn": "Request a call"
+    }
   }
 }

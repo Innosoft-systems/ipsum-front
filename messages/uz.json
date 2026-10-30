@@ -6,7 +6,17 @@
       "about": "Biz haqimizda",
       "education": "Ta'lim",
       "services": "Xizmatlar",
-      "contact": "Aloqa"
+      "contact": "Aloqa",
+      "directions": "Yo'nalishlar",
+      "reviews": "Sharhlar",
+      "checkup": "Check-up dasturlari",
+      "oncology": "Onkologiya",
+      "digitalPathology": "Raqamli patologiya",
+      "patientReviews": "Bemorlar sharhlari",
+      "internationalReviews": "Xalqaro sharhlar",
+      "news": "Yangiliklar",
+      "hematology": "Gematologiya",
+      "endocrinology": "Endokrinologiya"
     },
     "header": {
       "callback": "Ariza qoldirish",
@@ -425,5 +435,315 @@
     "errorToast": "Arizani yuborib bo'lmadi. Ma'lumotlarni tekshiring va qayta urinib ko'ring.",
     "closeAria": "Oynani yopish",
     "defaultTriggerLabel": "Ariza qoldirish"
+  },
+  "checkup": {
+    "eyebrow": "Check-up dasturlari",
+    "title": "Kompleks tekshiruv dasturlari",
+    "text": "Salomatlikni baholash va og'ishlarni erta aniqlash uchun tayyor tahlillar to'plamlari. Yoshingiz va maqsadingizga mos dasturni tanlab beramiz.",
+    "intro": {
+      "eyebrow": "Profilaktika",
+      "title": "Salomatligingiz haqida ko'proq biling",
+      "text": "Muntazam check-up o'zgarishlarni davolash eng samarali bo'lgan erta bosqichda aniqlashga yordam beradi. Bu vaqtinchalik matn: dasturlarning yakuniy tavsifi markaz shifokorlari bilan kelishiladi."
+    },
+    "includedTitle": "Tarkibi",
+    "programBtn": "Dasturga yozilish",
+    "programs": [
+      {
+        "name": "Bazaviy",
+        "desc": "Kattalar uchun salomatlikni dastlabki baholash.",
+        "tests": [
+          "Umumiy qon tahlili",
+          "Qonning biokimyoviy tahlili",
+          "Glyukoza va lipid profili",
+          "Umumiy siydik tahlili"
+        ]
+      },
+      {
+        "name": "Kengaytirilgan",
+        "desc": "Organizmning asosiy tizimlarini chuqur tekshirish.",
+        "tests": [
+          "«Bazaviy» dasturidagi barcha tahlillar",
+          "Qalqonsimon bez gormonlari",
+          "D vitamini va ferritin",
+          "Onkomarkerlar (bazaviy panel)",
+          "Koagulogramma"
+        ]
+      },
+      {
+        "name": "Ayollar salomatligi",
+        "desc": "Reproduktiv tizim profilaktikasi va nazorati.",
+        "tests": [
+          "«Bazaviy» dasturidagi barcha tahlillar",
+          "Ayollar jinsiy gormonlari",
+          "Sitologik tekshiruv (PAP-test)",
+          "Odam papillomavirusi (OPV) testi"
+        ]
+      },
+      {
+        "name": "Erkaklar salomatligi",
+        "desc": "Erkaklar salomatligi profilaktikasi va nazorati.",
+        "tests": [
+          "«Bazaviy» dasturidagi barcha tahlillar",
+          "Testosteron va PSA",
+          "Qalqonsimon bez gormonlari",
+          "Onkomarkerlar (bazaviy panel)"
+        ]
+      }
+    ],
+    "cta": {
+      "eyebrow": "Tekshiruvga yozilish",
+      "title": "Qaysi dastur mos kelishini bilmayapsizmi?",
+      "btn": "Ariza qoldirish"
+    }
+  },
+  "oncology": {
+    "eyebrow": "Onkologiya",
+    "title": "Onkologik diagnostika",
+    "text": "Aniq morfologik va molekulyar diagnostika to'g'ri davolashni tanlashning asosidir.",
+    "intro": {
+      "eyebrow": "Yo'nalish haqida",
+      "title": "Ishonish mumkin bo'lgan tashxis",
+      "text": "Biz biopsiya va operatsiya materialini zamonaviy usullar bilan tekshiramiz, xulosalar tajribali patomorfologlar tomonidan ikki bosqichda nazorat qilinadi. Bu vaqtinchalik matn, yo'nalishning yakuniy tavsifi keyinroq qo'shiladi.",
+      "highlights": [
+        "Xulosalarning ikki bosqichli nazorati",
+        "Zamonaviy uskunalar",
+        "Ekspertlar maslahati",
+        "Aniq bajarilish muddati"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostika yo'nalishlari",
+      "title": "Nimalarni tekshiramiz",
+      "items": [
+        {
+          "title": "Gistologik tekshiruv",
+          "text": "Morfologik tashxis qo'yish uchun biopsiya va operatsiya materiali to'qimalarini o'rganish."
+        },
+        {
+          "title": "Sitologik diagnostika",
+          "text": "O'zgarishlarni erta aniqlash uchun punktat, surtma va suyuqliklardagi hujayralarni tekshirish."
+        },
+        {
+          "title": "Immunogistokimyo (IGX)",
+          "text": "O'simta turini aniqlash va terapiyani tanlash uchun markerlarni belgilash."
+        },
+        {
+          "title": "Molekulyar-genetik tekshiruvlar",
+          "text": "Maqsadli terapiyani tanlashga ta'sir qiluvchi mutatsiyalar va biomarkerlarni qidirish."
+        },
+        {
+          "title": "Preparatlarni qayta ko'rib chiqish",
+          "text": "Tayyor gistologik shishalar va bloklar bo'yicha ekspertlarning mustaqil fikri."
+        },
+        {
+          "title": "Onkomarkerlar va skrining",
+          "text": "Onkologik kasalliklarni kuzatish va erta aniqlash uchun laborator testlar."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Maslahat",
+      "title": "Onkodiagnostika bo'yicha maslahat kerakmi?",
+      "btn": "Ariza qoldirish"
+    }
+  },
+  "digitalPathology": {
+    "eyebrow": "Raqamli patologiya",
+    "title": "Raqamli patologiya",
+    "text": "Gistologik preparatlarni raqamlashtirish shishalarni jo'natmasdan, ekspert fikrini tezroq olish imkonini beradi.",
+    "intro": {
+      "eyebrow": "Texnologiya haqida",
+      "title": "Raqamli formatdagi mikroskop",
+      "text": "Preparatlar yuqori aniqlikda skanerlanadi va raqamli tasvirga aylantiriladi, ularni masofadan o'rganish, arxivlash va solishtirish mumkin. Bu vaqtinchalik matn, yakuniy tavsif keyinroq qo'shiladi."
+    },
+    "benefits": {
+      "eyebrow": "Afzalliklar",
+      "title": "Raqamli patologiya nima beradi",
+      "items": [
+        {
+          "title": "Tezlik",
+          "text": "Tasvir skanerlangandan so'ng darhol ekspertga ochiladi, shishalarni yetkazish shart emas."
+        },
+        {
+          "title": "Masofaviy maslahatlar",
+          "text": "Boshqa klinika va mamlakatlardagi profil mutaxassislarning fikri."
+        },
+        {
+          "title": "Ishonchli arxiv",
+          "text": "Raqamli nusxalar saqlash vaqtida o'chmaydi va shikastlanmaydi."
+        },
+        {
+          "title": "Aniqlik",
+          "text": "Murakkab holatlarda o'lchash va solishtirish vositalari yordam beradi."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "Qanday ishlaydi",
+      "title": "Shishadan xulosagacha",
+      "desc": "Butun jarayon bemor va shifokor uchun shaffof.",
+      "steps": [
+        {
+          "title": "Materialni qabul qilish",
+          "text": "Biomaterialni ro'yxatga olamiz va gistologik preparatlarni tayyorlaymiz."
+        },
+        {
+          "title": "Skanerlash",
+          "text": "Shishalar yuqori aniqlikdagi skanerda raqamlashtiriladi."
+        },
+        {
+          "title": "Ekspert baholashi",
+          "text": "Patomorfolog tasvirni o'rganadi, kerak bo'lsa maslahatchilar jalb qilinadi."
+        },
+        {
+          "title": "Xulosa",
+          "text": "Tayyor xulosani va raqamli arxivga kirish imkonini olasiz."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Maslahat",
+      "title": "Raqamli patologiya haqida ko'proq bilmoqchimisiz?",
+      "btn": "Ariza qoldirish"
+    }
+  },
+  "reviews": {
+    "eyebrow": "Bemorlar sharhlari",
+    "title": "Bemorlarimiz sharhlari",
+    "text": "Salomatligini bizga ishongan insonlarning fikrlari.",
+    "patients": {
+      "eyebrow": "Sharhlar",
+      "title": "Bemorlar nima deydi"
+    },
+    "videos": {
+      "eyebrow": "Video",
+      "title": "Video sharhlar",
+      "text": "Bemorlarning o'z so'zlari bilan hikoyalari.",
+      "play": "Videoni ko'rish"
+    },
+    "photoAlt": "Bemor surati",
+    "cta": {
+      "eyebrow": "Sizning fikringiz muhim",
+      "title": "Bizning bemorimiz bo'lmoqchimisiz?",
+      "btn": "Ariza qoldirish"
+    }
+  },
+  "internationalReviews": {
+    "eyebrow": "Xalqaro sharhlar",
+    "title": "Xalqaro ekspertlar fikri",
+    "text": "Xorijiy mutaxassislar va hamkorlarning IPSUM Pathology laboratoriyasi faoliyati haqidagi sharhlari.",
+    "photoAlt": "Ekspert surati"
+  },
+  "news": {
+    "eyebrow": "Yangiliklar",
+    "title": "Yangiliklar va tadbirlar",
+    "text": "Laboratoriya yangiliklari, konferensiyalar, simpoziumlar va o'quv tadbirlari.",
+    "readMore": "Batafsil o'qish",
+    "back": "Barcha yangiliklar",
+    "videoTitle": "Video",
+    "empty": "Hozircha yangiliklar yo'q.",
+    "play": "Videoni ko'rish"
+  },
+  "hematology": {
+    "eyebrow": "Gematologiya",
+    "title": "Gematologik diagnostika",
+    "text": "Qon yaratuvchi tizim kasalliklarini aniqlash va nazorat qilish uchun qon va suyak iligi laborator tekshiruvlari.",
+    "intro": {
+      "eyebrow": "Yo'nalish haqida",
+      "title": "Qon kasalliklarining aniq diagnostikasi",
+      "text": "Biz umumiy qon tahlilidan immunofenotiplash va molekulyar testlargacha bo'lgan gematologik tekshiruvlar majmuasini bajaramiz. Bu vaqtinchalik matn, yo'nalishning yakuniy tavsifi keyinroq qo'shiladi.",
+      "highlights": [
+        "Tajribali mutaxassislar",
+        "Zamonaviy uskunalar",
+        "Ekspertlar maslahati",
+        "Aniq bajarilish muddati"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostika yo'nalishlari",
+      "title": "Nimalarni tekshiramiz",
+      "items": [
+        {
+          "title": "Umumiy qon tahlili",
+          "text": "Leykotsitar formulani hisoblagan holda qonning hujayra tarkibini baholash."
+        },
+        {
+          "title": "Qon hujayralari morfologiyasi",
+          "text": "Qon va suyak iligi surtmalarini mikroskopik tekshirish."
+        },
+        {
+          "title": "Oqimli sitometriya",
+          "text": "Gematologik kasalliklarni aniqlash uchun hujayralarni immunofenotiplash."
+        },
+        {
+          "title": "Koagulologik tekshiruvlar",
+          "text": "Qonning ivish tizimi va tromboz xavfini baholash."
+        },
+        {
+          "title": "Molekulyar gematologiya",
+          "text": "Diagnostika va terapiyani tanlash uchun muhim mutatsiya va translokatsiyalarni qidirish."
+        },
+        {
+          "title": "Kamqonlikni tekshirish",
+          "text": "Temir, ferritin, B12 vitamini va foliy kislotasini aniqlash."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Maslahat",
+      "title": "Gematologik diagnostika bo'yicha maslahat kerakmi?",
+      "btn": "Ariza qoldirish"
+    }
+  },
+  "endocrinology": {
+    "eyebrow": "Endokrinologiya",
+    "title": "Endokrinologik diagnostika",
+    "text": "Endokrin buzilishlarni aniqlash va nazorat qilish uchun gormonal va biokimyoviy tekshiruvlar.",
+    "intro": {
+      "eyebrow": "Yo'nalish haqida",
+      "title": "Gormonal muvozanat nazoratda",
+      "text": "Biz shifokorga ichki sekretsiya bezlari faoliyatini baholashda yordam beradigan gormonlar va metabolik ko'rsatkichlarni tekshiramiz. Bu vaqtinchalik matn, yo'nalishning yakuniy tavsifi keyinroq qo'shiladi.",
+      "highlights": [
+        "Gormonlarning keng paneli",
+        "Zamonaviy uskunalar",
+        "Ekspertlar maslahati",
+        "Aniq bajarilish muddati"
+      ]
+    },
+    "directions": {
+      "eyebrow": "Diagnostika yo'nalishlari",
+      "title": "Nimalarni tekshiramiz",
+      "items": [
+        {
+          "title": "Qalqonsimon bez",
+          "text": "TTG, erkin T3 va T4, tireoid peroksidaza va tireoglobulinga antitanachalar."
+        },
+        {
+          "title": "Qandli diabet",
+          "text": "Glyukoza, glikirlangan gemoglobin, insulin va C-peptid."
+        },
+        {
+          "title": "Jinsiy gormonlar",
+          "text": "Estradiol, progesteron, testosteron, LG, FSG va prolaktin."
+        },
+        {
+          "title": "Buyrak usti bezlari",
+          "text": "Kortizol, AKTG, aldosteron va renin."
+        },
+        {
+          "title": "Qalqonsimon oldi bezlari va kalsiy almashinuvi",
+          "text": "Paratgormon, kalsiy, fosfor va D vitamini."
+        },
+        {
+          "title": "Tugunlarning sitologik diagnostikasi",
+          "text": "Qalqonsimon bez tugunli hosilalari punktatlarini tekshirish."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Maslahat",
+      "title": "Endokrinologik diagnostika bo'yicha maslahat kerakmi?",
+      "btn": "Ariza qoldirish"
+    }
   }
 }

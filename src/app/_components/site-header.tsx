@@ -2,13 +2,20 @@
 
 import Image from 'next/image';
 import { Link, usePathname } from '@/i18n/navigation';
-import { Menu, Phone, X, Clock } from 'lucide-react';
+import { ChevronRight, Menu, Phone, X, Clock } from 'lucide-react';
 import { useState, useEffect, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { contactInfo } from '../_data/content';
+import {
+  desktopNavigation,
+  flatNavigation,
+  isNavGroup,
+  isPathActive,
+} from '../_data/navigation';
 import { AppointmentDialog } from './appointment-dialog';
 import { LanguageSwitcher } from './language-switcher';
+import { NavDropdown } from './nav-dropdown';
 
 const emptySubscribe = () => () => {};
 
@@ -25,14 +32,6 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const mounted = useMounted();
-
-  const navigationItems = [
-    { label: t('navigation.home'), href: '/' },
-    { label: t('navigation.about'), href: '/about' },
-    { label: t('navigation.education'), href: '/education' },
-    { label: t('navigation.services'), href: '/services' },
-    { label: t('navigation.contact'), href: '/contact' },
-  ];
 
   // Lock body scroll when drawer is open
   useEffect(() => {
@@ -73,19 +72,31 @@ export function SiteHeader() {
           {/* Desktop Navigation Menu */}
           <nav aria-label={t('header.mainNav')} className="desktop-nav-wrap">
             <div className="desktop-nav">
-              {navigationItems.map((item) => {
-                const isHashLink = item.href.includes('#');
-                const isActive =
-                  !isHashLink &&
-                  (item.href === '/' ? pathname === '/' : pathname.startsWith(item.href));
+              {desktopNavigation.map((entry) => {
+                if (isNavGroup(entry)) {
+                  const items = entry.children.map((child) => ({
+                    label: t(`navigation.${child.key}`),
+                    href: child.href,
+                    isActive: isPathActive(pathname, child.href),
+                  }));
+
+                  return (
+                    <NavDropdown
+                      isActive={items.some((item) => item.isActive)}
+                      items={items}
+                      key={entry.key}
+                      label={t(`navigation.${entry.key}`)}
+                    />
+                  );
+                }
 
                 return (
                   <Link
-                    className={isActive ? 'active' : undefined}
-                    href={item.href}
-                    key={item.href}
+                    className={isPathActive(pathname, entry.href) ? 'active' : undefined}
+                    href={entry.href}
+                    key={entry.href}
                   >
-                    {item.label}
+                    {t(`navigation.${entry.key}`)}
                   </Link>
                 );
               })}
@@ -160,20 +171,24 @@ export function SiteHeader() {
               </div>
 
               <nav className="mobile-drawer-nav">
-                {navigationItems.map((item) => {
-                  const isHashLink = item.href.includes('#');
-                  const isActive =
-                    !isHashLink &&
-                    (item.href === '/' ? pathname === '/' : pathname.startsWith(item.href));
+                {flatNavigation.map((item) => {
+                  const isActive = isPathActive(pathname, item.href);
 
                   return (
                     <Link
+                      aria-current={isActive ? 'page' : undefined}
                       className={`drawer-nav-item${isActive ? ' active' : ''}`}
                       href={item.href}
                       key={item.href}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <span>{item.label}</span>
+                      <span>{t(`navigation.${item.key}`)}</span>
+                      <ChevronRight
+                        aria-hidden="true"
+                        className="drawer-nav-chevron"
+                        size={18}
+                        strokeWidth={2.4}
+                      />
                     </Link>
                   );
                 })}
