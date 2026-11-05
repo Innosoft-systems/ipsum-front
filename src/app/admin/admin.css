@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 :root {
   --admin-red: #ed3237;
   --admin-ink: #35374b;
@@ -5,6 +7,18 @@
   --admin-line: #e5e7eb;
   --admin-bg: #f6f7f9;
 }
+
+@theme inline {
+  --font-sans: 'TT Norms', Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--admin-ink);
+  font-family: 'TT Norms', Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
 .admin-app {
   min-height: 100vh;
   background: var(--admin-bg);
