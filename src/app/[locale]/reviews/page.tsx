@@ -39,37 +39,30 @@ export default async function ReviewsPage({
             <h2>{t('patients.title')}</h2>
           </div>
           <div className="card-grid two-col">
-            {patientReviews.map((review, index) => {
-              const name = localize(review.name, locale);
-
-              return (
-                <article
-                  className="review-card"
-                  data-aos="fade-up"
-                  data-aos-delay={(index % 2) * 80}
-                  key={review.id}
-                >
-                  <blockquote>{localize(review.text, locale)}</blockquote>
-                  <div className="review-card-author">
+            {patientReviews.map((review, index) => (
+              <article
+                className="review-card"
+                data-aos="fade-up"
+                data-aos-delay={(index % 2) * 80}
+                key={review.id}
+              >
+                <blockquote>{localize(review.text, locale)}</blockquote>
+                <div className="review-card-author">
+                  {review.photo && (
                     <span className="avatar">
-                      {review.photo ? (
-                        <Image alt={t('photoAlt')} fill sizes="56px" src={review.photo} />
-                      ) : (
-                        name.charAt(0)
-                      )}
+                      <Image alt={t('photoAlt')} fill sizes="56px" src={review.photo} />
                     </span>
-                    <div>
-                      <strong>{name}</strong>
-                      <span>
-                        <time dateTime={review.date}>
-                          {format.dateTime(new Date(review.date), { dateStyle: 'long' })}
-                        </time>
-                      </span>
-                    </div>
+                  )}
+                  <div>
+                    <span>
+                      <time dateTime={review.date}>
+                        {format.dateTime(new Date(review.date), { dateStyle: 'long' })}
+                      </time>
+                    </span>
                   </div>
-                </article>
-              );
-            })}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
