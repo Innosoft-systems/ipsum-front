@@ -10,6 +10,10 @@ import {
   LayoutDashboard,
   LogOut,
   Menu,
+  Newspaper,
+  Globe,
+  MessageSquareQuote,
+  Video,
   Route,
   X,
 } from 'lucide-react';
@@ -21,6 +25,10 @@ const links = [
   ['/admin/categories', 'Категории', FolderTree],
   ['/admin/sections', 'Разделы', FolderTree],
   ['/admin/services', 'Услуги', FlaskConical],
+  ['/admin/reviews', 'Отзывы', MessageSquareQuote],
+  ['/admin/video-reviews', 'Видеоотзывы', Video],
+  ['/admin/international-reviews', 'Международные отзывы', Globe],
+  ['/admin/news', 'Новости', Newspaper],
   ['/admin/imports', 'Импорт Excel', FileSpreadsheet],
   ['/admin/appointments', 'Заявки', CalendarDays],
 ] as const;

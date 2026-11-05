@@ -4,16 +4,45 @@ import type {
   Appointment,
   Category,
   Direction,
+  InternationalReview,
   LabService,
+  NewsItem,
   PageResult,
+  Review,
   Section,
   UploadAsset,
+  VideoReview,
 } from './types';
 
 export type DirectionPayload = Partial<
   Pick<
     Direction,
     'name' | 'slug' | 'description' | 'shortDescription' | 'image' | 'order' | 'isActive'
+  >
+>;
+export type ReviewPayload = Partial<Pick<Review, 'text' | 'date' | 'photo' | 'isActive' | 'order'>>;
+export type VideoReviewPayload = Partial<
+  Pick<VideoReview, 'videoId' | 'title' | 'poster' | 'isActive' | 'order'>
+>;
+export type InternationalReviewPayload = Partial<
+  Pick<
+    InternationalReview,
+    'name' | 'title' | 'institution' | 'country' | 'quote' | 'photo' | 'isActive' | 'order'
+  >
+>;
+export type NewsPayload = Partial<
+  Pick<
+    NewsItem,
+    | 'slug'
+    | 'date'
+    | 'image'
+    | 'title'
+    | 'excerpt'
+    | 'body'
+    | 'videoId'
+    | 'videoTitle'
+    | 'isActive'
+    | 'order'
   >
 >;
 export type CategoryPayload = Partial<
@@ -56,6 +85,17 @@ export const publicApi = {
     ),
   services: async (params?: Record<string, unknown>) =>
     unwrap(await api.get<ApiResponse<PageResult<LabService>>>('/public/services', { params })),
+  reviews: async () =>
+    unwrap(await api.get<ApiResponse<PageResult<Review>>>('/public/reviews')).items,
+  videoReviews: async () =>
+    unwrap(await api.get<ApiResponse<PageResult<VideoReview>>>('/public/video-reviews')).items,
+  internationalReviews: async () =>
+    unwrap(
+      await api.get<ApiResponse<PageResult<InternationalReview>>>('/public/international-reviews'),
+    ).items,
+  news: async () => unwrap(await api.get<ApiResponse<PageResult<NewsItem>>>('/public/news')).items,
+  newsItem: async (slug: string) =>
+    unwrap(await api.get<ApiResponse<NewsItem>>(`/public/news/${encodeURIComponent(slug)}`)),
   appointment: async (payload: {
     fullName: string;
     phone: string;
@@ -87,6 +127,54 @@ export const adminApi = {
     unwrap(await api.patch<ApiResponse<Direction>>(`/admin/directions/${id}`, payload)),
   deleteDirection: async (id: string) =>
     unwrap(await api.delete<ApiResponse<{ id: string }>>(`/admin/directions/${id}`)),
+  reviews: async (params?: Record<string, unknown>) =>
+    unwrap(await api.get<ApiResponse<PageResult<Review>>>('/admin/reviews', { params })),
+  review: async (id: string) => unwrap(await api.get<ApiResponse<Review>>(`/admin/reviews/${id}`)),
+  createReview: async (payload: ReviewPayload) =>
+    unwrap(await api.post<ApiResponse<Review>>('/admin/reviews', payload)),
+  updateReview: async (id: string, payload: ReviewPayload) =>
+    unwrap(await api.patch<ApiResponse<Review>>(`/admin/reviews/${id}`, payload)),
+  deleteReview: async (id: string) =>
+    unwrap(await api.delete<ApiResponse<{ id: string }>>(`/admin/reviews/${id}`)),
+  videoReviews: async (params?: Record<string, unknown>) =>
+    unwrap(await api.get<ApiResponse<PageResult<VideoReview>>>('/admin/video-reviews', { params })),
+  videoReview: async (id: string) =>
+    unwrap(await api.get<ApiResponse<VideoReview>>(`/admin/video-reviews/${id}`)),
+  createVideoReview: async (payload: VideoReviewPayload) =>
+    unwrap(await api.post<ApiResponse<VideoReview>>('/admin/video-reviews', payload)),
+  updateVideoReview: async (id: string, payload: VideoReviewPayload) =>
+    unwrap(await api.patch<ApiResponse<VideoReview>>(`/admin/video-reviews/${id}`, payload)),
+  deleteVideoReview: async (id: string) =>
+    unwrap(await api.delete<ApiResponse<{ id: string }>>(`/admin/video-reviews/${id}`)),
+  internationalReviews: async (params?: Record<string, unknown>) =>
+    unwrap(
+      await api.get<ApiResponse<PageResult<InternationalReview>>>('/admin/international-reviews', {
+        params,
+      }),
+    ),
+  internationalReview: async (id: string) =>
+    unwrap(await api.get<ApiResponse<InternationalReview>>(`/admin/international-reviews/${id}`)),
+  createInternationalReview: async (payload: InternationalReviewPayload) =>
+    unwrap(await api.post<ApiResponse<InternationalReview>>('/admin/international-reviews', payload)),
+  updateInternationalReview: async (id: string, payload: InternationalReviewPayload) =>
+    unwrap(
+      await api.patch<ApiResponse<InternationalReview>>(
+        `/admin/international-reviews/${id}`,
+        payload,
+      ),
+    ),
+  deleteInternationalReview: async (id: string) =>
+    unwrap(await api.delete<ApiResponse<{ id: string }>>(`/admin/international-reviews/${id}`)),
+  news: async (params?: Record<string, unknown>) =>
+    unwrap(await api.get<ApiResponse<PageResult<NewsItem>>>('/admin/news', { params })),
+  newsItem: async (id: string) =>
+    unwrap(await api.get<ApiResponse<NewsItem>>(`/admin/news/${id}`)),
+  createNews: async (payload: NewsPayload) =>
+    unwrap(await api.post<ApiResponse<NewsItem>>('/admin/news', payload)),
+  updateNews: async (id: string, payload: NewsPayload) =>
+    unwrap(await api.patch<ApiResponse<NewsItem>>(`/admin/news/${id}`, payload)),
+  deleteNews: async (id: string) =>
+    unwrap(await api.delete<ApiResponse<{ id: string }>>(`/admin/news/${id}`)),
   category: async (id: string) =>
     unwrap(await api.get<ApiResponse<Category>>(`/admin/categories/${id}`)),
   categories: async (directionId?: string, params?: Record<string, unknown>) =>

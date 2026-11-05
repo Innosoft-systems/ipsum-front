@@ -7,6 +7,47 @@ export type Direction = EntityRef & {
   isActive: boolean;
   categoryCount?: number;
 };
+export type Review = {
+  _id: string;
+  text: { ru: string; uz: string; en: string };
+  date: string;
+  photo?: string;
+  isActive: boolean;
+  order: number;
+};
+export type LocalizedText = { ru: string; uz: string; en: string };
+export type VideoReview = {
+  _id: string;
+  videoId: string;
+  title: LocalizedText;
+  poster?: string;
+  isActive: boolean;
+  order: number;
+};
+export type InternationalReview = {
+  _id: string;
+  name: LocalizedText;
+  title: LocalizedText;
+  institution: LocalizedText;
+  country: LocalizedText;
+  quote: LocalizedText;
+  photo?: string;
+  isActive: boolean;
+  order: number;
+};
+export type NewsItem = {
+  _id: string;
+  slug: string;
+  date: string;
+  image: string;
+  title: LocalizedText;
+  excerpt: LocalizedText;
+  body: { ru: string[]; uz: string[]; en: string[] };
+  videoId?: string;
+  videoTitle?: LocalizedText;
+  isActive: boolean;
+  order: number;
+};
 export type Category = EntityRef & {
   directionId: string;
   description: string;
