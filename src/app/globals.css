@@ -6268,6 +6268,7 @@ h3 {
 .review-card blockquote,
 .expert-card blockquote {
   margin: 0;
+  white-space: pre-line;
   color: var(--ipsum-ink);
   font-size: 16px;
   font-weight: 500;

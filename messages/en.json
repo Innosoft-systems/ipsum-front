@@ -621,6 +621,9 @@
       "text": "Patient stories in their own words.",
       "play": "Watch video"
     },
+    "empty": "No patient reviews yet.",
+    "errorText": "Unable to load reviews.",
+    "retry": "Try again",
     "photoAlt": "Patient photo",
     "cta": {
       "eyebrow": "Your opinion matters",
@@ -632,6 +635,9 @@
     "eyebrow": "International reviews",
     "title": "What international experts say",
     "text": "Feedback from foreign specialists and partners on the work of the IPSUM Pathology laboratory.",
+    "empty": "No international reviews yet.",
+    "errorText": "Unable to load reviews.",
+    "retry": "Try again",
     "photoAlt": "Expert photo"
   },
   "news": {
@@ -641,6 +647,7 @@
     "readMore": "Read more",
     "back": "All news",
     "videoTitle": "Video",
+    "errorText": "Unable to load news.",
     "empty": "No news yet.",
     "play": "Watch video"
   },

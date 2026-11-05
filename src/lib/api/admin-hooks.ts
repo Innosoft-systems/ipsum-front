@@ -6,6 +6,10 @@ import {
   adminApi,
   type CategoryPayload,
   type DirectionPayload,
+  type InternationalReviewPayload,
+  type NewsPayload,
+  type VideoReviewPayload,
+  type ReviewPayload,
   type SectionPayload,
   type ServicePayload,
 } from './services';
@@ -58,6 +62,182 @@ export function useDeleteDirection() {
       await queryClient.invalidateQueries({ queryKey: ['admin', 'categories'] });
       await queryClient.invalidateQueries({ queryKey: ['admin', 'sections'] });
       await queryClient.invalidateQueries({ queryKey: ['admin', 'services'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useAdminReviews(params?: Record<string, unknown>) {
+  return useQuery({
+    queryKey: queryKeys.adminReviews(params),
+    queryFn: () => adminApi.reviews(params),
+  });
+}
+
+export function useCreateReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: ReviewPayload) => adminApi.createReview(payload),
+    onSuccess: async () => {
+      toast.success('Отзыв добавлен');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useUpdateReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, payload }: { id: string; payload: ReviewPayload }) =>
+      adminApi.updateReview(id, payload),
+    onSuccess: async () => {
+      toast.success('Отзыв обновлён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useDeleteReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: adminApi.deleteReview,
+    onSuccess: async () => {
+      toast.success('Отзыв удалён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useAdminVideoReviews(params?: Record<string, unknown>) {
+  return useQuery({
+    queryKey: queryKeys.adminVideoReviews(params),
+    queryFn: () => adminApi.videoReviews(params),
+  });
+}
+
+export function useCreateVideoReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: VideoReviewPayload) => adminApi.createVideoReview(payload),
+    onSuccess: async () => {
+      toast.success('Видеоотзыв добавлен');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'video-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useUpdateVideoReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, payload }: { id: string; payload: VideoReviewPayload }) =>
+      adminApi.updateVideoReview(id, payload),
+    onSuccess: async () => {
+      toast.success('Видеоотзыв обновлён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'video-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useDeleteVideoReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: adminApi.deleteVideoReview,
+    onSuccess: async () => {
+      toast.success('Видеоотзыв удалён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'video-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useAdminInternationalReviews(params?: Record<string, unknown>) {
+  return useQuery({
+    queryKey: queryKeys.adminInternationalReviews(params),
+    queryFn: () => adminApi.internationalReviews(params),
+  });
+}
+
+export function useCreateInternationalReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: InternationalReviewPayload) => adminApi.createInternationalReview(payload),
+    onSuccess: async () => {
+      toast.success('Международный отзыв добавлен');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'international-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useUpdateInternationalReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, payload }: { id: string; payload: InternationalReviewPayload }) =>
+      adminApi.updateInternationalReview(id, payload),
+    onSuccess: async () => {
+      toast.success('Международный отзыв обновлён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'international-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useDeleteInternationalReview() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: adminApi.deleteInternationalReview,
+    onSuccess: async () => {
+      toast.success('Международный отзыв удалён');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'international-reviews'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useAdminNews(params?: Record<string, unknown>) {
+  return useQuery({
+    queryKey: queryKeys.adminNews(params),
+    queryFn: () => adminApi.news(params),
+  });
+}
+
+export function useCreateNews() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (payload: NewsPayload) => adminApi.createNews(payload),
+    onSuccess: async () => {
+      toast.success('Новость добавлена');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'news'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useUpdateNews() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, payload }: { id: string; payload: NewsPayload }) =>
+      adminApi.updateNews(id, payload),
+    onSuccess: async () => {
+      toast.success('Новость обновлена');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'news'] });
+    },
+    onError: showError,
+  });
+}
+
+export function useDeleteNews() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: adminApi.deleteNews,
+    onSuccess: async () => {
+      toast.success('Новость удалена');
+      await queryClient.invalidateQueries({ queryKey: ['admin', 'news'] });
     },
     onError: showError,
   });

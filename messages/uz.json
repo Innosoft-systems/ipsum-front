@@ -621,6 +621,9 @@
       "text": "Bemorlarning o'z so'zlari bilan hikoyalari.",
       "play": "Videoni ko'rish"
     },
+    "empty": "Hozircha bemorlar sharhlari yo'q.",
+    "errorText": "Sharhlarni yuklab bo'lmadi.",
+    "retry": "Qayta urinib ko'rish",
     "photoAlt": "Bemor surati",
     "cta": {
       "eyebrow": "Sizning fikringiz muhim",
@@ -632,6 +635,9 @@
     "eyebrow": "Xalqaro sharhlar",
     "title": "Xalqaro ekspertlar fikri",
     "text": "Xorijiy mutaxassislar va hamkorlarning IPSUM Pathology laboratoriyasi faoliyati haqidagi sharhlari.",
+    "empty": "Hozircha xalqaro sharhlar yo'q.",
+    "errorText": "Sharhlarni yuklab bo'lmadi.",
+    "retry": "Qayta urinib ko'rish",
     "photoAlt": "Ekspert surati"
   },
   "news": {
@@ -641,6 +647,7 @@
     "readMore": "Batafsil o'qish",
     "back": "Barcha yangiliklar",
     "videoTitle": "Video",
+    "errorText": "Yangiliklarni yuklab bo'lmadi.",
     "empty": "Hozircha yangiliklar yo'q.",
     "play": "Videoni ko'rish"
   },
