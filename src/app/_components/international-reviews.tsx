@@ -14,8 +14,8 @@ export function InternationalReviews() {
 
   if (reviewsQuery.isLoading) {
     return (
-      <div className="card-grid" aria-busy="true">
-        {Array.from({ length: 3 }).map((_, index) => (
+      <div className="card-grid two-col" aria-busy="true">
+        {Array.from({ length: 2 }).map((_, index) => (
           <article className="expert-card" key={index}>
             <blockquote>&nbsp;</blockquote>
           </article>
@@ -46,7 +46,7 @@ export function InternationalReviews() {
   }
 
   return (
-    <div className="card-grid">
+    <div className="card-grid two-col">
       {reviews.map((review, index) => {
         const name = localize(review.name, locale);
 
@@ -54,7 +54,7 @@ export function InternationalReviews() {
           <article
             className="expert-card"
             data-aos="fade-up"
-            data-aos-delay={(index % 3) * 80}
+            data-aos-delay={(index % 2) * 80}
             key={review._id}
           >
             <Quote aria-hidden="true" className="quote-mark" size={30} strokeWidth={2.2} />
