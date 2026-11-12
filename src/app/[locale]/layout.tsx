@@ -6,6 +6,7 @@ import { routing, type Locale } from '@/i18n/routing';
 import '../globals.css';
 import { AosProvider } from '../_components/aos-provider';
 import { AppProviders } from '../providers';
+import { CountryFlagPolyfill } from '../_components/country-flag-polyfill';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <AppProviders>
             <AosProvider />
+            <CountryFlagPolyfill />
             {children}
           </AppProviders>
         </NextIntlClientProvider>
