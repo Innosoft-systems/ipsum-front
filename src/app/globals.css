@@ -19,7 +19,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'TT Norms', Arial, Helvetica, sans-serif;
+  --font-sans: "Twemoji Country Flags", 'TT Norms', Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -37,7 +37,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: 'TT Norms', Arial, Helvetica, sans-serif;
+  font-family: "Twemoji Country Flags", 'TT Norms', Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
   max-width: 100vw;
   overflow-x: hidden;

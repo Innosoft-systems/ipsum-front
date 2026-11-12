@@ -9,13 +9,13 @@
 }
 
 @theme inline {
-  --font-sans: 'TT Norms', Arial, Helvetica, sans-serif;
+  --font-sans: "Twemoji Country Flags", 'TT Norms', Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
   color: var(--admin-ink);
-  font-family: 'TT Norms', Arial, Helvetica, sans-serif;
+  font-family: "Twemoji Country Flags", 'TT Norms', Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
 }
 
