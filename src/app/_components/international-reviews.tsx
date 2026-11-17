@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { MessageSquareQuote, Quote } from 'lucide-react';
+import { Building2, MessageSquareQuote, Quote } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { localize } from '../_data/localized';
 import { usePublicInternationalReviews } from '@/lib/api/public-hooks';
@@ -14,9 +14,9 @@ export function InternationalReviews() {
 
   if (reviewsQuery.isLoading) {
     return (
-      <div className="card-grid two-col" aria-busy="true">
+      <div className="intl-reviews-list" aria-busy="true">
         {Array.from({ length: 2 }).map((_, index) => (
-          <article className="expert-card" key={index}>
+          <article className="expert-card intl-review-card is-skeleton" key={index}>
             <blockquote>&nbsp;</blockquote>
           </article>
         ))}
@@ -46,34 +46,46 @@ export function InternationalReviews() {
   }
 
   return (
-    <div className="card-grid two-col">
-      {reviews.map((review, index) => {
+    <div className="intl-reviews-list">
+      {reviews.map((review) => {
         const name = localize(review.name, locale);
+        const institution = localize(review.institution, locale);
+        const country = localize(review.country, locale);
+        const paragraphs = (localize(review.quote, locale) ?? '')
+          .split(/\n\s*\n/)
+          .map((paragraph) => paragraph.trim())
+          .filter(Boolean);
+        // Names may start with a flag emoji; use the first letter for the fallback avatar.
+        const initial = name.replace(/[^\p{L}]/gu, '').charAt(0);
 
         return (
-          <article
-            className="expert-card"
-            data-aos="fade-up"
-            data-aos-delay={(index % 2) * 80}
-            key={review._id}
-          >
-            <Quote aria-hidden="true" className="quote-mark" size={30} strokeWidth={2.2} />
-            <blockquote>{localize(review.quote, locale)}</blockquote>
-            <div className="expert-card-author">
-              <span className="avatar">
+          <article className="expert-card intl-review-card" data-aos="fade-up" key={review._id}>
+            <div className="intl-review-author">
+              <span className="avatar intl-review-avatar">
                 {review.photo ? (
-                  <Image alt={t('photoAlt')} fill sizes="56px" src={review.photo} unoptimized />
+                  <Image alt={t('photoAlt')} fill sizes="112px" src={review.photo} unoptimized />
                 ) : (
-                  name.charAt(0)
+                  initial
                 )}
               </span>
-              <div>
+              <div className="intl-review-meta">
                 <strong>{name}</strong>
-                <span>{localize(review.title, locale)}</span>
-                <span>
-                  {localize(review.institution, locale)}, {localize(review.country, locale)}
-                </span>
+                <span className="intl-review-role">{localize(review.title, locale)}</span>
+                {(institution || country) && (
+                  <span className="intl-review-place">
+                    <Building2 aria-hidden="true" size={15} strokeWidth={2.3} />
+                    <span>{[institution, country].filter(Boolean).join(', ')}</span>
+                  </span>
+                )}
               </div>
+            </div>
+            <div className="intl-review-body">
+              <Quote aria-hidden="true" className="quote-mark" size={34} strokeWidth={2.2} />
+              <blockquote>
+                {paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </blockquote>
             </div>
           </article>
         );

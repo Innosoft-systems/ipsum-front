@@ -6500,3 +6500,440 @@ h3 {
     font-size: 16px;
   }
 }
+
+/* ─── Home: "About us" presentation video ─── */
+.about-video-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(237, 50, 55, 0.08), transparent 34%),
+    radial-gradient(circle at 6% 92%, rgba(140, 154, 171, 0.1), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fff9f9 100%);
+}
+
+.about-video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.about-video-copy h2 {
+  font-size: 48px;
+  line-height: 1.05;
+}
+
+.about-video-copy > p:not(.eyebrow) {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about-video-highlights {
+  display: grid;
+  gap: 10px;
+  margin: 26px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.about-video-highlights li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--ipsum-ink);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.about-video-highlights li::before {
+  position: absolute;
+  top: 0.32em;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 4px solid rgba(237, 50, 55, 0.2);
+  border-radius: 50%;
+  background: var(--ipsum-red);
+  background-clip: padding-box;
+  content: '';
+}
+
+.about-video-link svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 180ms ease;
+}
+
+.about-video-link:hover svg {
+  transform: translateX(3px);
+}
+
+.about-video-media {
+  min-width: 0;
+  margin: 0;
+}
+
+.about-video-frame {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Brand accent behind the player */
+.about-video-frame::before {
+  position: absolute;
+  z-index: -1;
+  top: -14px;
+  right: -14px;
+  width: 58%;
+  height: 72%;
+  border-radius: calc(var(--radius) + 4px);
+  background: linear-gradient(135deg, var(--ipsum-red), var(--ipsum-pink));
+  opacity: 0.9;
+  content: '';
+}
+
+.about-video-frame::after {
+  position: absolute;
+  z-index: -1;
+  bottom: -26px;
+  left: -26px;
+  width: 140px;
+  height: 140px;
+  background-image: radial-gradient(rgba(53, 55, 75, 0.22) 1.6px, transparent 1.6px);
+  background-size: 14px 14px;
+  content: '';
+}
+
+.about-video-frame .video-embed {
+  border: 6px solid #ffffff;
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow:
+    0 28px 60px rgba(53, 55, 75, 0.2),
+    0 0 0 1px rgba(53, 55, 75, 0.06);
+}
+
+.about-video-caption {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--ipsum-ink);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.about-video-caption svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--ipsum-red);
+}
+
+.about-video-section--about {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(237, 50, 55, 0.07), transparent 40%),
+    var(--ipsum-soft);
+}
+
+.about-video-media--wide {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.about-video-media--wide .about-video-caption {
+  justify-content: center;
+}
+
+@media (max-width: 1040px) {
+  .about-video-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .about-video-copy {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-video-copy h2 {
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  .about-video-copy > p:not(.eyebrow) {
+    font-size: 16px;
+  }
+
+  .about-video-highlights {
+    margin: 22px 0 26px;
+  }
+
+  .about-video-frame::before {
+    top: -8px;
+    right: -8px;
+  }
+
+  .about-video-frame::after {
+    bottom: -14px;
+    left: -10px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .about-video-frame .video-embed {
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 430px) {
+  .about-video-copy h2 {
+    font-size: 27px;
+  }
+
+  .about-video-link {
+    width: 100%;
+  }
+}
+
+/* ─── International reviews: one full-width card per row (spans the page .container) ─── */
+.intl-reviews-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.intl-review-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+  transition:
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.intl-review-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--ipsum-red), var(--ipsum-pink));
+  content: '';
+}
+
+.intl-review-card:hover {
+  border-color: rgba(237, 50, 55, 0.22);
+  box-shadow: var(--shadow);
+}
+
+.intl-review-card.is-skeleton {
+  display: block;
+  min-height: 220px;
+  padding: 36px;
+}
+
+.intl-review-author {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  border-right: 1px solid var(--line);
+  background: linear-gradient(180deg, #fff9f9 0%, #ffffff 100%);
+  padding: 36px 30px 36px 34px;
+}
+
+.intl-review-avatar {
+  align-self: center;
+  width: 112px;
+  height: 112px;
+  font-size: 36px;
+  box-shadow:
+    0 0 0 5px #ffffff,
+    0 0 0 6px rgba(237, 50, 55, 0.18),
+    0 14px 30px rgba(53, 55, 75, 0.14);
+}
+
+.intl-review-meta {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.intl-review-meta strong {
+  color: var(--ipsum-ink);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.intl-review-role {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.intl-review-place {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 4px;
+  color: var(--ipsum-ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.intl-review-place svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--ipsum-red);
+}
+
+.intl-review-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  padding: 36px 44px 40px;
+}
+
+.intl-review-body .quote-mark {
+  opacity: 0.85;
+}
+
+.intl-review-body blockquote {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  overflow-wrap: break-word;
+  color: var(--ipsum-ink);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.intl-review-body blockquote p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .intl-review-card {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .intl-review-author {
+    padding: 28px 22px 28px 26px;
+  }
+
+  .intl-review-avatar {
+    width: 92px;
+    height: 92px;
+  }
+
+  .intl-review-body {
+    padding: 28px 30px 32px;
+  }
+}
+
+/* Phones (≤680px): centred profile header (photo, name, title, institution), quote below */
+@media (max-width: 680px) {
+  .intl-reviews-list {
+    gap: 18px;
+  }
+
+  .intl-review-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .intl-review-card::before {
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: 4px;
+  }
+
+  .intl-review-author {
+    align-items: center;
+    gap: 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(237, 50, 55, 0.1), transparent 62%),
+      linear-gradient(180deg, #fff1f1 0%, #fffafa 100%);
+    padding: 30px 22px 24px;
+    text-align: center;
+  }
+
+  .intl-review-avatar {
+    width: 92px;
+    height: 92px;
+    font-size: 30px;
+    box-shadow:
+      0 0 0 4px #ffffff,
+      0 0 0 5px rgba(237, 50, 55, 0.2),
+      0 12px 26px rgba(53, 55, 75, 0.14);
+  }
+
+  .intl-review-meta {
+    justify-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .intl-review-meta strong {
+    font-size: 17px;
+  }
+
+  .intl-review-role {
+    display: -webkit-box;
+    max-width: 300px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-size: 13.5px;
+  }
+
+  /* Inline icon so it stays next to the text when a long institution wraps */
+  .intl-review-place {
+    display: block;
+    max-width: 300px;
+    margin-top: 4px;
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .intl-review-place svg {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: -2px;
+  }
+
+  .intl-review-place > span {
+    display: inline;
+  }
+
+  .intl-review-body {
+    gap: 12px;
+    padding: 22px 20px 26px;
+  }
+
+  .intl-review-body .quote-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .intl-review-body blockquote {
+    gap: 12px;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}

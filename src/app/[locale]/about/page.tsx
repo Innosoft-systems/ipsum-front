@@ -11,6 +11,7 @@ import {
   Workflow,
 } from 'lucide-react';
 import { PageShell } from '../../_components/page-shell';
+import { AboutVideoSection } from '../../_components/about-video-section';
 import { AppointmentDialog } from '../../_components/appointment-dialog';
 import { LicensesGallery } from '../../_components/licenses-gallery';
 import { PartnersSection } from '../../_components/partners-section';
@@ -132,6 +133,8 @@ export default async function AboutPage({
           </figure>
         </div>
       </section>
+
+      <AboutVideoSection variant="about" />
 
       <section className="section about-corporate-section">
         <div className="container about-corporate-list">

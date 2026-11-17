@@ -96,6 +96,14 @@
       "f4_title": "Bemorlarga g'amxo'rlik",
       "f4_text": "Oson ro'yxatdan o'tish, administrator maslahati va natijalarni onlayn olish qulayligi."
     },
+    "aboutVideo": {
+      "eyebrow": "Biz haqimizda",
+      "title": "IPSUM PATHOLOGY bilan tanishing",
+      "text": "IPSUM Pathology patomorfologiya, klinik diagnostika va zamonaviy molekulyar usullarni yagona standart asosida birlashtiradi. Ilg'or uskunalar va har bir bosqichdagi ko'p bosqichli sifat nazorati shifokorga to'g'ri qaror qabul qilishga, bemorga esa ishonchli natijani tez va qulay olishga yordam beradi.",
+      "cta": "Biz haqimizda batafsil",
+      "videoEyebrow": "Laboratoriya haqida video",
+      "videoTitle": "IPSUM PATHOLOGY tarixi: g'oyadan diagnostikadagi ilg'or texnologiyalargacha"
+    },
     "process": {
       "eyebrow": "Jarayon qanday kechadi?",
       "title": "Tahlil topshirish oson va qulay",

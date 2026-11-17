@@ -96,6 +96,14 @@
       "f4_title": "Patient-Centered Experience",
       "f4_text": "Effortless scheduling, personalized administrator guidance, and instant online access to test reports."
     },
+    "aboutVideo": {
+      "eyebrow": "About us",
+      "title": "Meet IPSUM PATHOLOGY",
+      "text": "IPSUM Pathology unifies pathomorphology, clinical laboratory diagnostics, and advanced molecular methods under rigorous quality standards. State-of-the-art equipment and multi-tier quality control at every stage help physicians make informed decisions and give patients reliable results quickly and conveniently.",
+      "cta": "More about us",
+      "videoEyebrow": "Video about the laboratory",
+      "videoTitle": "The story of IPSUM PATHOLOGY: from an idea to advanced diagnostic technology"
+    },
     "process": {
       "eyebrow": "How It Works",
       "title": "Diagnostic testing made effortless",
